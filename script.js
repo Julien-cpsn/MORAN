@@ -45,7 +45,7 @@ function resetGame() {
 
 function resetRound() {
     playerIndex = 0
-    number = Math.round(Math.random() * 1000)
+    number = Math.round(Math.random() * 8000)
     console.log(number)
     romanNumber = numberToRomanNumber(number)
     console.log(romanNumber)
@@ -112,6 +112,8 @@ function romainDigitsByIndex(number) {
             return 'D'
         case 1000:
             return 'M'
+        case 5000:
+            return 'Ṽ'
     }
 }
 
@@ -143,19 +145,24 @@ function handleInput(input) {
             tryLetterToIndex('L', playerIndex)
             break
         case '5':
-        case 't':
+        case 'q':
             console.log('C')
             tryLetterToIndex('C', playerIndex)
             break
         case '6':
-        case 'y':
+        case 's':
             console.log('D')
             tryLetterToIndex('D', playerIndex)
             break
         case '1':
-        case 'u':
+        case 'd':
             console.log('M')
             tryLetterToIndex('M', playerIndex)
+            break
+        case '2':
+        case 'f':
+            console.log('Ṽ')
+            tryLetterToIndex('Ṽ', playerIndex)
             break
     }
 

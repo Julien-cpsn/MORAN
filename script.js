@@ -15,7 +15,8 @@ window.onload = () => {
 
     if(window.mobileCheck()) {
         console.log("Mobile")
-        prompt()
+        const mobileInput = document.getElementById('mobile-input')
+        mobileInput.focus()
     }
 }
 

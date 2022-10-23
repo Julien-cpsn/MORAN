@@ -6,8 +6,6 @@ let intervalId = null
 let score = 0
 
 window.onload = () => {
-    console.log("Loading...")
-
     alert("Let's go ?")
     resetGame()
 
@@ -38,7 +36,7 @@ function resetGame() {
     }
 
     resetRound()
-    time = 2000
+    time = 2500
 
     const scoreTag = document.getElementById('score')
     scoreTag.innerText = 0

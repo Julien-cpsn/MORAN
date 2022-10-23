@@ -11,12 +11,15 @@ window.onload = () => {
     alert("Let's go ?")
     resetGame()
 
-    window.addEventListener('keydown', handleKeyPressed)
 
     if(window.mobileCheck()) {
         console.log("Mobile")
         const mobileInput = document.getElementById('mobile-input')
         mobileInput.focus()
+        window.addEventListener('input', handleKeyPressed)
+    }
+    else {
+        window.addEventListener('keydown', handleKeyPressed)
     }
 }
 

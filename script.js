@@ -103,30 +103,37 @@ function romainDigitsByIndex(number) {
 /* PLAYER */
 function handleKeyPressed(event) {
     switch (event.key) {
+        case '7':
         case 'a':
             console.log('I')
             tryLetterToIndex('I', playerIndex)
             break
+        case '8':
         case 'z':
             console.log('V')
             tryLetterToIndex('V', playerIndex)
             break
+        case '9':
         case 'e':
             console.log('X')
             tryLetterToIndex('X', playerIndex)
             break
+        case '4':
         case 'r':
             console.log('L')
             tryLetterToIndex('L', playerIndex)
             break
+        case '5':
         case 't':
             console.log('C')
             tryLetterToIndex('C', playerIndex)
             break
+        case '6':
         case 'y':
             console.log('D')
             tryLetterToIndex('D', playerIndex)
             break
+        case '1':
         case 'u':
             console.log('M')
             tryLetterToIndex('M', playerIndex)

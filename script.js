@@ -11,15 +11,17 @@ window.onload = () => {
     alert("Let's go ?")
     resetGame()
 
+    // PC
+    window.addEventListener('keydown', handleKeyPressed)
 
-    if(window.mobileCheck()) {
-        console.log("Mobile")
-        const mobileInput = document.getElementById('mobile-input')
-        mobileInput.focus()
-        window.addEventListener('input', handleKeyPressed)
-    }
-    else {
-        window.addEventListener('keydown', handleKeyPressed)
+    // Mobile
+    const mobileButtons = document.getElementById('mobile-buttons')
+    for (const mobileButtonRow of mobileButtons.children) {
+        for (const mobileButton of mobileButtonRow.children) {
+            mobileButton.addEventListener('click', function () {
+                handleInput(this.innerText)
+            })
+        }
     }
 }
 
@@ -117,7 +119,11 @@ function romainDigitsByIndex(number) {
 
 /* PLAYER */
 function handleKeyPressed(event) {
-    switch (event.key) {
+    handleInput(event.key)
+}
+
+function handleInput(input) {
+    switch (input) {
         case '7':
         case 'a':
             console.log('I')

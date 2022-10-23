@@ -67,3 +67,10 @@
 .text-bold {
     font-weight: bolder!important;
 }
+
+/* GAME */
+.mobile-button {
+    width: 75px;
+    height: 75px;
+    background-color: dimgray;
+}
